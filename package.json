@@ -1,0 +1,15 @@
+{
+  "name": "sx-tool",
+  "version": "1.0.0",
+  "description": "个人工具npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
+  }
+}
