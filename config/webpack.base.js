@@ -3,18 +3,20 @@
  * @Autor: 
  * @Date: 2021-06-01 17:08:17
  * @LastEditors: shangxin
- * @LastEditTime: 2021-06-04 17:26:39
+ * @LastEditTime: 2021-06-04 19:01:51
  */
 // webpack.config.js
 // TODO 只是开发环境的设置
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader').VueLoaderPlugin;
+console.log('lujing', path.resolve(__dirname, '..','src'))
 module.exports = {
+  
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions. //添加在此的后缀所对应的文件可以省略后缀
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
-      '@$': path.resolve(__dirname, '..','src'),
+      '@src$': path.resolve(__dirname, '..','src'),
     },
   },
   module: {
@@ -27,7 +29,7 @@ module.exports = {
       },
       // ts-loader 用于加载解析 ts 文件
       {
-        test: /\.ts?$/,
+        test: /\.tsx?$/,
         use: [{
           loader: 'ts-loader',
           options: {

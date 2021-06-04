@@ -3,20 +3,21 @@
  * @Autor: 
  * @Date: 2021-06-01 17:32:53
  * @LastEditors: shangxin
- * @LastEditTime: 2021-06-04 16:55:00
+ * @LastEditTime: 2021-06-04 17:55:51
  */
 const {merge} = require('webpack-merge');
 const base = require('./webpack.base.js');
 const path = require('path')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 function resolve (dir) {
   return path.join(__dirname,'..', dir)
 }
 module.exports = merge(base, {
-  mode:"development",
+  mode:"production",
   entry: resolve('./src/index.ts'),
   devtool: 'none',
   output: {
-    path:resolve('example/dist'),
+    path:resolve('dist'),
     filename: 'index.js',
     library: 'sx-tool',
     libraryTarget: 'umd',

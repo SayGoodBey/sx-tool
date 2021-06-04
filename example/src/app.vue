@@ -3,7 +3,7 @@
  * @Autor: 
  * @Date: 2021-06-04 14:24:37
  * @LastEditors: shangxin
- * @LastEditTime: 2021-06-04 17:37:01
+ * @LastEditTime: 2021-06-04 19:29:31
 -->
 <!-- 
 @description   
@@ -17,7 +17,8 @@
 <script lang='ts'>
 
 import { defineComponent } from 'vue'
-import {add} from '@/index'
+import {add} from '@src/index'
+// import {add} from '../../src/index'
 export default defineComponent({
   name: 'app',
   setup(){

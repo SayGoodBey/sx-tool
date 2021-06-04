@@ -3,12 +3,12 @@
  * @Autor: 
  * @Date: 2021-06-01 17:16:03
  * @LastEditors: shangxin
- * @LastEditTime: 2021-06-04 17:33:37
+ * @LastEditTime: 2021-06-04 20:17:55
  */
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "target": "es5",
+    // "outDir": "./dist",
+    "target": "ES5",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
@@ -22,7 +22,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
+      "@src/*": [
         "./src/*"
       ]
     },
@@ -39,7 +39,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "types/**/*.ts",
+    "types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

@@ -3,7 +3,7 @@
  * @Autor: 
  * @Date: 2021-06-01 17:32:40
  * @LastEditors: shangxin
- * @LastEditTime: 2021-06-04 14:50:01
+ * @LastEditTime: 2021-06-04 20:13:15
  */
 const {merge} = require('webpack-merge');
 const base = require('./webpack.base.js');
@@ -12,6 +12,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 function resolve (dir) {
   return path.join(__dirname,'..', dir)
 }
+
+console.log('------',path.resolve(__dirname, '../'))
+
 module.exports = merge(base, {
   mode:"development",
   entry: resolve('example/src/main.ts'),
