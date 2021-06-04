@@ -3,16 +3,17 @@
  * @Autor: 
  * @Date: 2021-06-01 17:16:03
  * @LastEditors: shangxin
- * @LastEditTime: 2021-06-03 21:30:54
+ * @LastEditTime: 2021-06-04 17:33:37
  */
 {
   "compilerOptions": {
+    "outDir": "./dist",
     "target": "es5",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
-    "declaration": true,    // 生成相应的 .d.ts 文件
-    "removeComments": true,    // 删除所有注释，除了以 /!* 开头的版权信息。
+    "declaration": true, // 生成相应的 .d.ts 文件
+    "removeComments": true, // 删除所有注释，除了以 /!* 开头的版权信息。
     "importHelpers": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
@@ -20,12 +21,9 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    // "types": [//指定引入的类型声明文件，默认是自动引入所有声明文件，一旦指定该选项，则会禁用自动引入，改为只引入指定的类型声明文件，如果指定空数组[]则不引用任何文件
-    //   "webpack-env"
-    // ],
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ]
     },
     "lib": [
@@ -40,9 +38,11 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.tsx",
+    "types/**/*.ts",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

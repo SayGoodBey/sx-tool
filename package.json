@@ -2,22 +2,31 @@
   "name": "sx-tool",
   "version": "1.0.0",
   "description": "个人工具npm",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types":"dist/index.d.ts",
+  "files":["dist"],
   "scripts": {
+    "dev": "webpack serve --config ./config/webpack.dev.js",
+    "build": "webpack --config ./config/webpack.product.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.11",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^5.2.6",
+    "html-webpack-plugin": "^5.3.1",
     "less": "^4.1.1",
     "less-loader": "^9.0.0",
     "style-loader": "^2.0.0",
     "ts-loader": "^9.2.2",
     "typescript": "^4.3.2",
     "vue": "^3.0.11",
+    "vue-loader": "^16.2.0",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
   }
 }
