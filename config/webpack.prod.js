@@ -3,7 +3,7 @@
  * @Autor: 
  * @Date: 2021-06-01 17:32:53
  * @LastEditors: shangxin
- * @LastEditTime: 2021-06-04 17:55:51
+ * @LastEditTime: 2021-06-07 16:58:49
  */
 const {merge} = require('webpack-merge');
 const base = require('./webpack.base.js');
@@ -15,7 +15,6 @@ function resolve (dir) {
 module.exports = merge(base, {
   mode:"production",
   entry: resolve('./src/index.ts'),
-  devtool: 'none',
   output: {
     path:resolve('dist'),
     filename: 'index.js',
@@ -24,10 +23,22 @@ module.exports = merge(base, {
   },
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      }
+        // 用于加载解析 less 文件
+        {
+          test: /\.less$/,
+          use: [
+            { loader: 'style-loader', },
+            {
+              loader: 'css-loader',
+              options: {
+                modules: {
+                  localIdentName: '[hash:base64:6]',
+                },
+              }
+            },
+            { loader: 'less-loader', },
+          ]
+        },
     ]
   },
   //生产环境 外部插件加入peerDependencies 

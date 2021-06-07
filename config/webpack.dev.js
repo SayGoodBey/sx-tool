@@ -3,7 +3,7 @@
  * @Autor: 
  * @Date: 2021-06-01 17:32:40
  * @LastEditors: shangxin
- * @LastEditTime: 2021-06-04 20:13:15
+ * @LastEditTime: 2021-06-07 17:57:53
  */
 const {merge} = require('webpack-merge');
 const base = require('./webpack.base.js');
@@ -17,7 +17,7 @@ console.log('------',path.resolve(__dirname, '../'))
 
 module.exports = merge(base, {
   mode:"development",
-  entry: resolve('example/src/main.ts'),
+  entry: resolve('example/main.ts'),
   devtool: 'inline-source-map',
   output: {
     path:resolve('example/dist'),
@@ -36,7 +36,7 @@ module.exports = merge(base, {
   plugins: [
     // 自动注入编译打包好的代码至 html
     new HtmlWebpackPlugin({
-      template: resolve('example/src/index.html'),
+      template: resolve('example/index.html'),
       filename: 'index.html',
     }),
   ],
