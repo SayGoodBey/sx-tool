@@ -12,7 +12,7 @@
     "build": "webpack --config ./config/webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "shangxin",
   "license": "ISC",
   "devDependencies": {
     "@types/webpack-env": "^1.16.0",
