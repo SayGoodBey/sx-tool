@@ -33,7 +33,15 @@
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SayGoodBey/sx-tool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vueComponent/ant-design-vue/issues"
+  },
   "peerDependencies": {
+    "@vue/compiler-sfc": ">=3.0.11",
     "vue": ">=3.0.11"
   }
 }
