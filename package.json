@@ -1,6 +1,6 @@
 {
   "name": "sx-tool",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "个人工具npm",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
