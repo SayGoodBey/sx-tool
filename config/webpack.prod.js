@@ -3,7 +3,7 @@
  * @Autor: 
  * @Date: 2021-06-01 17:32:53
  * @LastEditors: shangxin
- * @LastEditTime: 2021-06-07 16:58:49
+ * @LastEditTime: 2021-06-08 16:56:31
  */
 const {merge} = require('webpack-merge');
 const base = require('./webpack.base.js');
@@ -18,8 +18,10 @@ module.exports = merge(base, {
   output: {
     path:resolve('dist'),
     filename: 'index.js',
-    library: 'sx-tool',
-    libraryTarget: 'umd',
+    library: {
+      name:'sxTool',
+      type: 'umd',
+    },
   },
   module: {
     rules: [
